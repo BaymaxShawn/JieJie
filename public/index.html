@@ -1,89 +1,365 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.18.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.18.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JieJie | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="image/logo/logo.png" width="125px" alt="Jie Jie logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">Home主页</a></li>
+                        <li><a href="">Products产品</a></li>
+                        <li><a href="">About关于我们</a></li>
+                        <li><a href="">Contact联系我们</a></li>
+                        <li><a href="">Account个人账户</a></li>
+                    </ul>
+                </nav>
+                <img src="image/shopping-cart.png" width="30px" height="30px" >
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>Clean Your Way To<br>A Better Day!</h1>
+                <p>Transform your home from grimy to shiny, starting with our cleaning supplies.捷洁，让清洁变得更简单。</p>
+                <a href="" class="btn">发现好物 &#8594;</a>
+            </div>
+            <div class="col-2">
+                <img src="image/home/cleanhome.png" alt="p1">
+            </div>          
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    </section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+<!-------- featured categories ---------->
+    <section>
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="image/img/666.jpg" alt="img1">
+                </div>
+                <div class="col-3">
+                    <img src="image/img/888.webp" alt="img2">
+                </div>
+                <div class="col-3">
+                    <img src="image/img/777.webp" alt="img3">
+                </div>
+            </div>
+        </div> 
+    </div>
+    </section>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+<!-------- featured products ---------->
+    <section>
+    <div class="featured">
+        <div class="small-container">
+            <h2 class="title">明星产品</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="image/product/product3.jpg" alt="折叠拖把桶">
+                    <h4>折叠拖把桶</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>¥34.99</p>
+                </div>
+                <div class="col-4">
+                    <img src="image/product/product4.jpg" alt="粘毛器">
+                    <h4>粘毛器</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>¥4.99</p>
+                </div>
+                <div class="col-4">
+                    <img src="image/product/product5.jpg" alt="胶布拖把">
+                    <h4>胶布拖把</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>¥19.99</p>
+                </div>
+                <div class="col-4">
+                    <img src="image/product/product1.jpg" alt="平板拖把">
+                    <h4>平板拖把</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>¥28.99</p>
+                </div>
+            </div>
+
+<!-------- lasted products ---------->
+
+            <h2 class="title">限时热卖</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="image/last/IMG_8134.JPG" alt="超强垃圾袋">
+                    <h4>超强垃圾袋</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>¥10.99</p>
+                </div>
+                <div class="col-4">
+                    <img src="image/last/product6.jpg" alt="折叠拖把桶">
+                    <h4>折叠拖把桶</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>¥14.99</p>
+                </div>
+                <div class="col-4">
+                    <img src="image/last/product2.jpg" alt="懒人抹布">
+                    <h4>懒人抹布</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>¥3.99</p>
+                </div>
+                <div class="col-4">
+                    <img src="image/last/IMG_8133.JPG" alt="仿丝瓜海绵">
+                    <h4>仿丝瓜海绵</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>¥13.99</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="image/product/product4.jpg" alt="粘毛器">
+                    <h4>粘毛器</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>¥4.99</p>
+                </div>
+                <div class="col-4">
+                    <img src="image/last/IMG_8135.JPG" alt="清洁瓜绵">
+                    <h4>清洁瓜绵</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>¥9.99</p>
+                </div>
+                <div class="col-4">
+                    <img src="image/last/1 (6).jpg" alt="平板拖把">
+                    <h4>平板拖把</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>¥28.99</p>
+                </div>
+                <div class="col-4">
+                    <img src="image/last/IMG_8136.JPG" alt="亚麻锅刷">
+                    <h4>亚麻锅刷</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>¥9.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+<!-------- offer ---------->
+    <section>
+        <div class="offer">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="image/Robot.webp" alt="Robot" class="offer-img">
+                    </div>
+                    <div class="col-2">
+                        <p>捷洁独家好礼</p>
+                        <h1>NEATO 扫地机器人</h1>
+                        <small>
+                            Neato智能扫地机器人采用先进的传感器技术和强大的吸尘器，能够智能避开障碍物，清洁任何家居空间。它配备多种清洁模式和高效的过滤系统，能够捕捉和过滤空气中的微尘和细菌，确保您的家居环境清洁卫生。此外，它还可以通过智能手机应用进行远程控制和定时预约。让我们的扫地机器人为您带来高效、智能和便利的家居清洁体验！
+                        </small>
+                        <a href="" class="btn">加入购物车 &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-------- testimonial ---------->
+
+    <section>
+        <div class="testimonial">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p>
+                            那个抹布真的太好用了！我一直苦于家里的玻璃擦不干净，但是这个抹布一擦就干净了，简直宝藏抹布。不仅是方便易清洗，而且它的吸水能力超强，非常适合清洁厨房和卫生间的水渍。强烈推荐！
+                        </p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <img src="image/user/images.png" alt="female" >
+                        <h3>河北 刘**  女士</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p>
+                            这家清洁用品网店的服务非常好，我买的清洁布质量也非常好，很柔软而且吸水性也很强，用起来非常方便。我非常感谢这家店家的专业和耐心，他们真的是一家非常值得信赖的网店。
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="image/user/images-3.png" alt="male" >
+                        <h3>北京 林** 先生</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p>
+                            我非常喜欢这家清洁用品网店的环保理念，他们的产品都非常环保，使用起来也非常安全，不会对健康造成任何伤害。而且他们的包装也非常简洁大方，我觉得这家店家真的非常用心。
+                        </p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <img src="image/user/images.png" alt="female">
+                        <h3>山东 郑**  女士</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-------------brands---------------->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="image/brands/neato.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="image/brands/alibaba.png" alt="NBC">
+                </div>
+                <div class="col-5">
+                    <img src="image/brands/amazon.jpg" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="image/brands/PG.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="image/brands/irobot.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!------------- footer ---------------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>我们的公众号</h3>
+                    <p>扫码关注</p>
+                    <div class="app-logo">
+                        <img src="image/logo/二维码.jpg" alt="公众号">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="image/logo/logo.png" alt="logo">
+                    <p>我们的使命是致力于为客户提供高品质的家居清洁用品和卓越的服务，为客户创造更加舒适、健康、安全的家居环境。</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>相关链接</h3>
+                    <ul>
+                        <li>优惠福利</li>
+                        <li>产品介绍</li>
+                        <li>售后服务</li>
+                        <li>加盟我们</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li>阿里巴巴网店</li>
+                        <li>京东网店</li>
+                        <li>淘宝天猫网店</li>
+                        <li>拼多多网店</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright © 2006 - 2023  捷洁 JieJie.com 版权所有 </p>
+        </div>
+    </div>
+
+</body>
 </html>
