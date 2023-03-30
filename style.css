@@ -262,3 +262,7 @@ ul{
 .copyright{
     text-align: center;
 }
+
+.office {
+    max-width: 30%;
+}

@@ -262,3 +262,10 @@ ul{
 .copyright{
     text-align: center;
 }
+
+/*------- About Us ------*/
+
+.office {
+    max-width: 50%;  
+    height: auto; 
+}
