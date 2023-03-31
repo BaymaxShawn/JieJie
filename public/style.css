@@ -299,6 +299,48 @@ ul{
 
 }
 
+/*----------all products pages ---------*/
+
+.row-2{
+    justify-content: space-between;
+    margin: 20px auto 80px;
+}
+select{
+    border: 2px solid #8f5da2;
+    padding: 5px;
+}
+select:focus{
+    outline: none ;
+}
+.page-btn{
+    margin: 0 auto 80px;
+}
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #8f5da2;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.page-btn span:hover{
+    background: #8f5da2 ;
+}
+
+/*---------- About Us ---------*/
+.office {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.office img{
+    max-width: 50%;
+    padding: 30px 0;
+    margin-left: 300px;
+}
+
+
 /*-------- media query for less than 600 screen size --------*/
 @media only screen and (max-width: 600px){
     .row{
