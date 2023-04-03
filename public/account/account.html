@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - JieJie</title>
+    <link rel="stylesheet" href="../style.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section>
+
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="../index.html"><img src="../image/logo/logo.png" width="125px" alt="Jie Jie logo"></a>
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li>
+                                <a href="../index.html">商店主页</a>
+                            </li>
+                            <li>
+                                <a href="../product/product.html">更多宝贝</a>
+                            </li>
+                            <li>
+                                <a href="../official/about.html">关于我们</a>
+                            </li>
+                            <li>
+                                <a href="#contactUs">联系我们</a>
+                            </li>
+                            <li><a href="">个人账户</a></li>
+                        </ul>
+                    </nav>
+                    <a href="../cart/cart.html">
+                        <img src="../image/icon/shopping-cart.png"  width="32px" height="28px" >
+                    </a>
+                    <div class="menuicon">
+                        <img src="../image/icon/menu.png" alt="menuicon" onclick="menutoggle()">
+                    </div>
+                  
+            </div>
+  
+    </section>
+  
+<!------------- account ---------------->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="../image/home/cleanhome.png" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">用户登陆</span>
+                        <span onclick="register()">新用户注册</span>
+                        <hr id="Indicator">
+                    </div>
+                    <form id="LoginForm">
+                        <input type="text" placeholder="用户名 / 邮箱 / 手机号">
+                        <input type="password" placeholder="密码">
+                        <button type="submit" class="btn">登陆</button>
+                        <a href="">忘记密码？</a>
+                    </form>
+                    <form id="RegForm">
+                        <input type="text" placeholder="用户名 / 邮箱 / 手机号">
+                        <input type="email" placeholder="邮箱">
+                        <input type="password" placeholder="密码">
+                        <button type="submit" class="btn">注册</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+  
+<!------------- footer ---------------->
+<div class="footer">
+    <div class="container">
+        <div class="row" id="contactUs">
+            <div class="footer-col-1">
+                <h3>我们的公众号</h3>
+                <p>扫码关注</p>
+                <div class="app-logo">
+                    <img src="../image/logo/二维码.jpg" alt="公众号">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="../image/logo/logo.png" alt="logo">
+                <p>我们的使命是致力于为客户提供高品质的家居清洁用品和卓越的服务，为客户创造更加舒适、健康、安全的家居环境。</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>相关链接</h3>
+                <ul>
+                    <li>优惠福利</li>
+                    <li>产品介绍</li>
+                    <li>售后服务</li>
+                    <li>加盟我们</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>关注我们</h3>
+                <ul>
+                    <li>阿里巴巴网店</li>
+                    <li>京东网店</li>
+                    <li>淘宝天猫网店</li>
+                    <li>拼多多网店</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright © 2006 - 2023  捷洁 JieJie.com 版权所有 </p>
+    </div>
+</div>
+
+<!-------js for toggle menu ------->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px"){
+            MenuItems.style.maxHeight = "200px";
+        }
+        else{
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+<!------------------js for toggle Form ----------------->
+
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm")
+    var Indicator = document.getElementById("Indicator")
+
+        function register(){
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+        function login(){
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+
+</script>
+
+</body>
+</html>
